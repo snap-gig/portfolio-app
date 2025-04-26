@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-app",
+  "version": "1.0.0",
+  "description": "Portfolio & Case Study Generator for Creatives",
+  "license": "ISC",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "start:dev": "npm-run-all --parallel backend:dev frontend:dev",
+    "backend:dev": "cd backend && npm run start:dev",
+    "frontend:dev": "cd frontend && npm run dev",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
